@@ -474,11 +474,11 @@ footer {
         background: white;
     }
 
-    header {
+    .header {
         display: none;
     }
 
-    .header p {
+    header p {
         display: none
     }
 

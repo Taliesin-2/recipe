@@ -478,7 +478,7 @@ footer {
         display: none;
     }
 
-    img {
+    .recipe-image, .side-dish img, svg {
         display: none !important;
     }
 

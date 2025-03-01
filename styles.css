@@ -474,11 +474,15 @@ footer {
         background: white;
     }
 
+    header {
+        display: none
+    }
+
     nav {
         display: none;
     }
 
-    .recipe-image, .side-dish img, svg {
+    .recipe-image, .side-dish img, svg, .action-buttons {
         display: none !important;
     }
 

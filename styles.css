@@ -164,7 +164,7 @@ h1 {
     background-color: var(--light-gray);
 }
 
-/* Ensure each button is stacked with its text */
+
 .action-buttons div {
     display: flex;
     flex-direction: column;
@@ -185,7 +185,7 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Style the labels under each icon */
+
 .action-buttons p {
     font-size: 14px;
     color: var(--orange-red);
@@ -196,21 +196,21 @@ h1 {
 
 /* Recipe Content Wrapper */
 .recipe-content {
-    max-width: 414px; /* Keep content constrained */
-    margin: 0 auto; /* Center horizontally */
+    max-width: 414px; 
+    margin: 0 auto; 
     background-color: var(--light-gray);
 }
 
 /* Recipe Image */
 .recipe-image {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block;
 }
 
 /* Recipe Text */
 .recipe-text {
-    padding: 20px; /* Spacing inside text container */
+    padding: 20px; 
     text-align: left;
     font-size: 16px;
     color: var(--black);
@@ -237,16 +237,16 @@ h1 {
 /* Definition List */
 .details dl {
     display: grid;
-    grid-template-columns: auto 1fr; /* Align labels and values */
+    grid-template-columns: auto 1fr; 
     gap: 5px 15px;
 }
 
-/* Definition Terms (Bold Titles) */
+
 .details dt {
     font-weight: 700;
 }
 
-/* Definition Values (Regular Text) */
+
 .details dd {
     margin: 0;
     font-weight: 400;
@@ -272,8 +272,8 @@ h1 {
 
 /* Unordered List */
 .ingredients ul {
-    list-style-type: disc; /* Bullet points */
-    padding-left: 20px; /* Align bullets properly */
+    list-style-type: disc; 
+    padding-left: 20px; 
 }
 
 /* List Items */
@@ -455,50 +455,39 @@ footer {
         max-width: 768px;
         margin: 0 auto;
     }
-  .menu-nav {
-        display: flex; /* Ensures it's visible in large screens */
-    }
+
 }
 
 @media (min-width: 950px) {
-    .menu-nav {
-        display: flex; /* Ensures it's visible in large screens */
-    }
+
 }
   
-  @media print {
-    /* Set margins */
+@media print {
     @page {
         margin: 0.5in;
         size: A4;
     }
 
-    /* Change font to serif for print readability */
     body {
         font-family: serif;
         color: black;
         background: white;
     }
 
-    /* Hide navigation */
     nav {
         display: none;
     }
 
-    /* Hide images OR convert them to grayscale */
     img {
-        display: none;
-        /* filter: grayscale(100%); */ /* Uncomment to show images in grayscale */
+        display: none; 
     }
 
-    /* Convert hyperlinks to full URLs */
-    a[href]:after {
-        content: " (" attr(href) ")";
+    a::after {
+        content: " (" attr(href) ")"; 
         font-size: 12px;
-        color: black;
+        word-break: break-all;
     }
 
-    /* Prevent unnecessary page breaks */
     .recipe-content,
     .details,
     .ingredients,
@@ -507,10 +496,15 @@ footer {
         page-break-inside: avoid;
     }
 
-    /* Ensure everything fits within 1 page as best as possible */
     html, body {
         width: 100%;
         height: 100%;
         overflow: hidden;
     }
-  }
+
+    
+    body {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+}

@@ -475,6 +475,10 @@ footer {
     }
 
     header {
+        display: none;
+    }
+
+    .header p {
         display: none
     }
 
@@ -482,8 +486,12 @@ footer {
         display: none;
     }
 
-    .recipe-image, .side-dish img, svg, .action-buttons {
+    .recipe-image, .side-dish img, svg {
         display: none !important;
+    }
+
+    .action-buttons p {
+        display: none;
     }
 
     a::after {
